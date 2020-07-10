@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tagreader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-7u-Xbu">
+                                <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="G1f-PM-Gxh"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" id="nj8-sz-b9j">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nBb-y3-ZiY">
+                                            <rect key="frame" x="20" y="11" width="24" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="clear" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clearTag" destination="BYZ-38-t0r" eventType="touchUpInside" id="1ly-n0-9ws"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="CGs-ky-Yqa"/>
+                                    <barButtonItem style="plain" id="nVG-eY-SX5">
+                                        <button key="customView" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mUd-Ob-EuH">
+                                            <rect key="frame" x="94" y="11" width="300" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal">
+                                                <imageReference key="image" image="antenna.radiowaves.left.and.right" catalog="system" symbolScale="large"/>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="scanTag" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7a-tw-9yp"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rKV-Fx-hvm">
+                                <rect key="frame" x="20" y="129" width="374" height="689"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rKV-Fx-hvm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="85" id="GnE-Ke-0Ex"/>
+                            <constraint firstItem="rKV-Fx-hvm" firstAttribute="centerX" secondItem="7nb-7u-Xbu" secondAttribute="centerX" id="Tj8-5v-kPN"/>
+                            <constraint firstItem="7nb-7u-Xbu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ToT-TS-kVv"/>
+                            <constraint firstItem="rKV-Fx-hvm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="aNv-Gm-cHg"/>
+                            <constraint firstItem="7nb-7u-Xbu" firstAttribute="top" secondItem="rKV-Fx-hvm" secondAttribute="bottom" id="cfW-aq-B3R"/>
+                            <constraint firstAttribute="trailing" secondItem="7nb-7u-Xbu" secondAttribute="trailing" id="crh-97-z0b"/>
+                            <constraint firstItem="7nb-7u-Xbu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iEv-mY-jwd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tag_body" destination="rKV-Fx-hvm" id="dbN-kI-CPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="antenna.radiowaves.left.and.right" catalog="system" width="128" height="109"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
