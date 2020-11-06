@@ -8,9 +8,15 @@ This is an early stage application and lacks thorough documentation or error han
 
 ## Example
 
+### Launch
+
 ![](images/tagreader.png)
 
+### Scanning
+
 ![](images/tagreader-scan.png)
+
+### Display
 
 ![](images/tagreader-success.png)
 
