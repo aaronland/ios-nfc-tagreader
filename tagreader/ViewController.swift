@@ -46,8 +46,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, NFCNDEFR
     /// - Tag: processingTagData
     func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
         
-        print("MESSAGE")
-        
         DispatchQueue.main.async {
             self.detectedMessages.append(contentsOf: messages)
         }
